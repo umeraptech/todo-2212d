@@ -12645,7 +12645,7 @@ _.d=d
 _.e=e
 _.f=f},
 Qo:function Qo(){},
-Ki(a,b){return new A.z7(a,b,null)},
+Ki(a,b,c){return new A.z7(a,b,c,null)},
 Kk(a){var s=a.kt(t.Np)
 if(s!=null)return s
 throw A.e(A.nC(A.b([A.jz("Scaffold.of() called with a context that does not contain a Scaffold."),A.b5("No Scaffold ancestor could be found starting from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same StatefulWidget as that whose build function actually creates the Scaffold widget being sought."),A.H8('There are several ways to avoid this problem. The simplest is to use a Builder to get a context that is "under" the Scaffold. For an example of this, please see the documentation for Scaffold.of():\n  https://api.flutter.dev/flutter/material/Scaffold/of.html'),A.H8("A more efficient solution is to split your build function into several widgets. This introduces a new context from which you can obtain the Scaffold. In this solution, you would have an outer widget that creates the Scaffold populated by instances of your new inner widgets, and then in these inner widgets you would use Scaffold.of().\nA less elegant but more expedient solution is assign a GlobalKey to the Scaffold, then use the key.currentState property to obtain the ScaffoldState rather than using the Scaffold.of() function."),a.aeC("The context used was")],t.p)))},
@@ -12737,9 +12737,11 @@ _.aH$=b
 _.c=_.a=null},
 afS:function afS(a,b){this.a=a
 this.b=b},
-z7:function z7(a,b,c){this.e=a
-this.f=b
-this.a=c},
+z7:function z7(a,b,c,d){var _=this
+_.e=a
+_.f=b
+_.cy=c
+_.a=d},
 oW:function oW(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o){var _=this
 _.d=a
 _.e=b
@@ -47607,8 +47609,8 @@ a5o(){var s,r=this.c
 r.toString
 s=A.a7o(r)
 if(s!=null&&s.f.length!==0)s.jg(0,B.CD,B.cT)},
-go4(){this.a.toString
-return!0},
+go4(){var s=this.a.cy
+return s!==!1},
 ap(){var s=this,r=null
 s.aO()
 s.c.toString
@@ -77998,7 +78000,7 @@ hD(){return A.au(["task",this.a,"taskDate",this.b,"isDone",this.c],t.N,t.z)}}
 A.oK.prototype={
 ac(){return new A.QI(new A.ba(null,t.am))}}
 A.QI.prototype={
-L(a){return A.Ki(null,new A.lN(new A.aiA(this),null))},
+L(a){return A.Ki(null,new A.lN(new A.aiA(this),null),!0)},
 FP(){var s=this,r=null,q=$.Z().oy(3,2,B.hv),p=A.O(5,0,0,0),o=A.ko(B.d2,B.hs,30,!1,new A.aiP(s),A.ayr()),n=A.ko(B.fv,B.hr,8,!0,new A.aiQ(s),A.ays()),m=s.e,l=t.w,k=s.c
 if(!m){k.toString
 m=A.cE(new A.eF("Register User",new A.aiR(s),r),r,A.b8(k,r,l).w.a.a)}else{k.toString
@@ -78122,7 +78124,7 @@ $S:66}
 A.p9.prototype={
 ac(){return new A.RL()}}
 A.RL.prototype={
-L(a){return A.Ki(null,new A.lN(new A.akb(this),null))},
+L(a){return A.Ki(null,new A.lN(new A.akb(this),null),null)},
 Gy(){var s=null,r=A.O(B.c.ab(178.5),255,152,0),q=t.D
 return A.fM(A.hu(A.b([new A.by(B.bh,A.qd(new A.by(B.bh,A.hu(A.b([B.a_,B.RT,B.a_,new A.eF("Click to Login",new A.akd(this),s),B.a_],q),B.a0,B.bF,B.ay),s),r,2,s),s)],q),B.a0,B.bF,B.ay),s,s)}}
 A.akb.prototype={
@@ -78155,7 +78157,7 @@ s===$&&A.a()
 s.aI()
 this.aA()},
 L(a){var s=null,r=A.d6(""+this.gQ2(),s,s,s,s,s,s),q=this.f,p=t.D
-return A.Ki(s,A.e4(s,A.fM(A.hu(A.b([A.qd(new A.by(B.cW,A.hu(A.b([B.lh,B.a_,r,B.a_,A.cE(A.d6(q===$?this.f="":q,2,B.bI,s,s,B.hp,s),s,200)],p),B.a0,B.bF,B.ay),s),B.G,2,s)],p),B.a0,B.bF,B.ay),s,s),B.v,s,s,B.zG,s,s,s,s,s,s,s))}}
+return A.Ki(s,A.e4(s,A.fM(A.hu(A.b([A.qd(new A.by(B.cW,A.hu(A.b([B.lh,B.a_,r,B.a_,A.cE(A.d6(q===$?this.f="":q,2,B.bI,s,s,B.hp,s),s,200)],p),B.a0,B.bF,B.ay),s),B.G,2,s)],p),B.a0,B.bF,B.ay),s,s),B.v,s,s,B.zG,s,s,s,s,s,s,s),s)}}
 A.aks.prototype={
 $0(){var s=this.a
 if(s.c!=null){s.a_(new A.akr(s))
@@ -78183,7 +78185,7 @@ s=$.dv
 r=(s==null?$.dv=$.jf():s).jh("[DEFAULT]")
 A.dg(r,$.ho(),!0)
 if(A.wI(new A.e6(r)).goz()!=null)A.ix(B.r,new A.ahk(this),t.P)},
-L(a){return A.Ki(null,new A.lN(new A.ahh(this),null))},
+L(a){return A.Ki(null,new A.lN(new A.ahh(this),null),null)},
 FP(){var s=this,r=null,q=$.Z().oy(3,2,B.hv),p=A.O(5,0,0,0),o=A.ko(B.d2,B.hs,30,!1,new A.ahy(s),A.ayr()),n=A.ko(B.fv,B.hr,8,!0,new A.ahz(s),A.ays()),m=s.e,l=t.w,k=s.c
 if(!m){k.toString
 m=A.cE(new A.eF("Login User",new A.ahA(s),r),r,A.b8(k,r,l).w.a.a)}else{k.toString
@@ -78325,7 +78327,7 @@ if(q!=null)o.d=q.a.c.a.a
 p=A.jt(o.e.a.c.kj(J.bw(o.d)))
 p.a.mY(p.b,!0)},
 L(a){var s=null,r=A.b([A.ap8(s,B.Ef,s,new A.alj(a),s,s)],t.D)
-return A.Ki(new A.va(B.RV,r,new A.Qj(s,s,1/0,56),s),new A.lN(new A.alk(this),s))},
+return A.Ki(new A.va(B.RV,r,new A.Qj(s,s,1/0,56),s),new A.lN(new A.alk(this),s),s)},
 TZ(){return A.ati(new A.alp(this),this.w,t.Sm)},
 U_(){return A.ati(new A.alu(this),this.w,t.Sm)},
 od(){var s=0,r=A.H(t.H),q=this,p,o
